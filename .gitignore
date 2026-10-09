@@ -1,0 +1,25 @@
+# NOVA OS — ignore backups, editor noise, OS junk
+
+# Patcher backups
+*.before-*
+*backup
+*backup.*
+
+# Snapshot folders
+nova-os-backups/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+*.swp
+*~
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

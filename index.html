@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10152e">
+<title>NOVA OS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="boot" class="boot">
+  <div class="boot-logo"><img src="NovaOsLogo.png" alt="NOVA OS Logo" class="nova-logo-boot"> NOVA OS</div>
+  <div class="boot-sub">A little universe of your own</div>
+  <div class="boot-track"><i></i></div><small>Starting your desktop…</small>
+  <button id="skipBoot" class="boot-skip">Skip</button>
+</div>
+<!-- === NOVA LOCK SCREEN (auto-generated) === -->
+  <div id="lockScreen" class="lock-screen">
+    <div class="lock-bg" id="lockBg"></div>
+    <div class="lock-content">
+      <div class="lock-date" id="lockDate"></div>
+      <div class="lock-time" id="lockTime">--:--</div>
+      <div class="lock-hint">Click or press any key to unlock</div>
+    </div>
+    <div class="lock-brand">NOVA OS</div>
+  </div>
+  <!-- === END NOVA LOCK SCREEN === -->
+  <div id="desktop" class="desktop hidden">
+  <!-- === NOVA TOPBAR (auto-generated) === -->
+  <header class="topbar macbar">
+    <div class="macbar-left">
+      <img src="NovaOsLogo.png" alt="NOVA OS" class="macbar-logo">
+      <button class="macbar-appname" id="topbarAppName" aria-haspopup="true" aria-expanded="false">
+        <span id="topbarAppNameLabel">NOVA OS</span>
+        <span class="macbar-caret">▾</span>
+      </button>
+      <nav class="macbar-menus" id="topbarMenus">
+        <button class="macbar-menu" data-menu="file">File</button>
+        <button class="macbar-menu" data-menu="view">View</button>
+        <button class="macbar-menu" data-menu="go">Go</button>
+        <button class="macbar-menu" data-menu="window">Window</button>
+        <button class="macbar-menu" data-menu="help">Help</button>
+      </nav>
+    </div>
+    <div class="macbar-right">
+      <label class="global-search macbar-search"><span>⌕</span><input id="globalSearch" placeholder="Search apps, games, and files…" autocomplete="off"></label>
+      <button class="macbar-icon" id="topbarFullscreen" title="Toggle fullscreen" aria-label="Toggle fullscreen">⛶</button>
+      <button id="profileButton" class="profile-pill"><span class="avatar" id="avatar">N</span><span id="profileName">Nova User</span><span>⌄</span></button>
+      <div class="clock"><strong id="clock">--:--</strong><small id="date">---</small></div>
+    </div>
+    <div class="macbar-dropdown hidden" id="topbarDropdown"></div>
+  </header>
+  <!-- === END NOVA TOPBAR === -->
+  <main id="wallpaper" class="wallpaper wp-mountains">
+    <div class="wallpaper-shade"></div>
+    <section id="desktopIcons" class="desktop-icons">
+      <button class="desktop-icon" data-app="files"><span class="app-glyph blue">▰</span><span>My Computer</span></button>
+      <button class="desktop-icon" data-app="notes"><span class="app-glyph violet">▤</span><span>Notes</span></button>
+      <button class="desktop-icon" data-app="gamelib"><span class="app-glyph violet">♞</span><span>Games</span></button>
+      <button class="desktop-icon" data-app="store"><span class="app-glyph pink">▣</span><span>App Store</span></button>
+      <button class="desktop-icon" data-app="settings"><span class="app-glyph slate">⚙</span><span>Settings</span></button>
+    </section>
+    <!-- === NOVA WIDGETS (auto-generated) === -->
+    <section id="widgetLayer" class="widget-layer" aria-label="Desktop widgets"></section>
+    <div id="windows" class="windows"></div>
+    <div id="startMenu" class="start-menu hidden">
+      <div class="start-head"><div class="avatar big" id="startAvatar">N</div><div><b id="startName">Nova User</b><small>Welcome back</small></div><button id="editProfile" title="Edit profile">✎</button></div>
+      <label class="start-search">⌕ <input id="startSearch" placeholder="Search apps…"></label>
+      <div class="start-label">PINNED</div>
+      <div class="pinned-grid" id="pinnedGrid"></div>
+      <div class="start-bottom"><span>All apps</span><button id="powerButton">⏻ Power</button></div>
+    </div>
+    <div id="profileMenu" class="profile-menu hidden">
+      <b>Who's using NOVA?</b><p>Personalize your desktop profile.</p>
+      <label>Display name<input id="profileInput" maxlength="24" placeholder="Your name"></label>
+      <label>Avatar initial<input id="initialInput" maxlength="2" placeholder="N"></label>
+      <button id="saveProfile" class="primary">Save profile</button>
+    </div>
+    <div id="toast" class="toast hidden"></div>
+  </main>
+  <!-- === NOVA DOCK RESTYLE (auto-generated) === -->
+  <footer class="taskbar nova-dock" id="taskbar">
+    <div class="taskbar-apps" id="taskbarApps"></div>
+    <span class="nova-dock-sep"></span>
+    <button class="nova-dock-power" id="dockPower" title="Power" aria-label="Power">⏻</button>
+    <div style="display:none" aria-hidden="true">
+      <button id="startButton"></button>
+      <div class="system-tray">
+        <button id="themeQuick" title="Switch theme">◐</button>
+        <button id="wifiButton" title="Network">⌁</button>
+        <button id="soundButton" title="Sound">♫</button>
+        <span class="tray-time" id="trayClock">--:--</span>
+      </div>
+    </div>
+  </footer>
+  <!-- === END NOVA DOCK RESTYLE === -->
+</div>
+<script src="app.js"></script>
+
+<script src="./desktop-clean-toggle.js" defer></script>
+</body></html>
